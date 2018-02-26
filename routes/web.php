@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/controlador', 'PruebaController@index');
+Route::get('/name/{nombre}', 'PruebaController@nombre');
+Route::resource('movie', 'MovieController');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,5 +28,16 @@ Route::get('/prueba', function () {
 Route::get('/otraprueba', function () {
     return "Otra prueba de una dos tres cuatro cinco";
 });
+
+
+Route::get('/nombre/{nombre}', function ($nombre) {
+    return "Este el nombre".$nombre;
+});
+
+Route::get('/cosa/{nombre}', function ($nombre) {
+    return "Este es la cosa"." = ".$nombre;
+});
+
+
 
 
