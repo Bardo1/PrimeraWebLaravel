@@ -11,11 +11,15 @@
 |
 */
 
+Route::get('/', 'FrontController@index');
+Route::get('/contacto', 'FrontController@contacto');
+Route::get('/reviews', 'FrontController@reviews');
+
 Route::get('/controlador', 'PruebaController@index');
 Route::get('/name/{nombre}', 'PruebaController@nombre');
 Route::resource('movie', 'MovieController');
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
