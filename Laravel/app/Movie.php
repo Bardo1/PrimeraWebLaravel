@@ -8,6 +8,6 @@ class Movie extends Model
 {
     //
     protected $stable ="movies"
-	protected $primaryKey
+	  protected $primaryKey
     //
 }

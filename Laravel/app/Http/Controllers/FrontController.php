@@ -16,9 +16,13 @@ class FrontController extends Controller
       return view('contacto');
     }
 
-     public function reviews()
+    public function reviews()
     {
       return view('reviews');
+    }
+
+    public function admin(){
+      return view('admin.index');
     }
 
 }
